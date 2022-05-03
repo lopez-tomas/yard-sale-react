@@ -1,0 +1,69 @@
+@use 'colors'
+@use 'fonts'
+
+$image-size: 60px
+$separation: 16px
+$mini-separation: 6px
+$rotation-time: .30s
+
+.container
+    display: grid
+    place-items: center
+    width: 100%
+    height: 100vh
+
+.order__container
+    display: grid
+    width: 300px
+
+    .title
+        display: none
+        margin-top: 0px
+        margin-bottom: 2rem
+        font-size: fonts.$md
+
+    .order__resume
+        display: grid
+        grid-template-columns: auto auto
+        padding: $separation $separation 14px $separation
+        background-color: colors.$text-input-field
+
+        div:first-child
+            padding: ($mini-separation + 2) $mini-separation
+
+            .date, .quantity
+                font-size: fonts.$sm
+                margin: 0
+
+            .date
+                margin-top: 0
+                margin-bottom: 6px
+                font-weight: bold
+
+            .quantity
+                margin-top: 0
+                color: colors.$secondary-color
+
+        .total
+            font-size: fonts.$sm
+            font-weight: bold
+
+@media (min-width: 640px)
+    .order__container
+        .title
+            display: block
+
+@mixin total
+    margin: 0
+    padding: $mini-separation ($mini-separation * 2)
+    justify-self: flex-end
+    align-self: center
+
+@mixin arrow-rotation
+    .normal
+        transform: rotate(0deg)
+        transition: transform $rotation-time ease-in-out
+
+    .rotated
+        transform: rotate(90deg)
+        transition: transform $rotation-time ease-in-out

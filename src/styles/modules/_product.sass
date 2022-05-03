@@ -1,0 +1,57 @@
+@use 'colors'
+@use 'fonts'
+
+$image-size: 60px
+$separation: 16px
+$mini-separation: 6px
+
+@mixin products
+    grid-column-end: span 2
+    padding: 8px
+    border-radius: 8px
+    background-color: colors.$white
+
+@mixin product
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: $separation
+    padding: 0
+
+    div
+        display: flex
+        align-items: center
+
+        .product--image__container
+            width: $image-size
+            height: $image-size
+
+            .product--image
+                width: 100%
+                height: 100%
+                border-radius: 12px
+                object-fit: cover
+
+        .product--name
+            font-size: fonts.$sm
+            color: colors.$secondary-color
+
+    &--price
+        font-size: fonts.$sm
+        font-weight: bold
+
+@mixin product-image__container
+    margin: 0
+    padding: $mini-separation
+
+@mixin product-name
+    margin: 0
+    padding: $mini-separation
+    padding-left: $mini-separation * 2
+
+@mixin product-price
+    margin: 0
+    padding: 0 $mini-separation
+
+@mixin last-child
+    margin-bottom: 0

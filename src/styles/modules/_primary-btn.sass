@@ -1,0 +1,10 @@
+@use 'button'
+@use 'colors'
+
+.primary__btn
+	@include button.general
+	color: colors.$white
+	background-color: colors.$main-color
+
+	&:hover
+		background-color: colors.$darker-main-color

@@ -1,9 +1,12 @@
 import React from 'react';
-import '@styles/global.sass';
+import Layout from '@containers/Layout';
+import Login from '@containers/Login';
 
 const App = () => {
     return (
-        <h1>Hello World! Welcome to Yard Sale</h1>
+        <Layout>
+            <Login />
+        </Layout>
     );
 }
 

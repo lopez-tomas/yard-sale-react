@@ -4,7 +4,9 @@
   "description": "Yard Sale with React",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -16,8 +18,8 @@
     "html",
     "css",
     "sass",
-    "npm",
-    "webpack"
+    "webpack",
+    "babel"
   ],
   "author": "Tomás López",
   "license": "MIT",

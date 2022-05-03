@@ -1,8 +1,9 @@
 import React from 'react';
+import '@styles/global.sass';
 
 const App = () => {
     return (
-        <h1>Hello World!</h1>
+        <h1>Hello World! Welcome to Yard Sale</h1>
     );
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { getCLS, getFID, getLCP } from 'web-vitals';
 
-import App from './components/App';
+import App from '@components/App';
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(

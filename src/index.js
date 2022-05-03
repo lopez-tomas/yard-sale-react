@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
+import { getCLS, getFID, getLCP } from 'web-vitals';
 
 import App from './components/App';
 
@@ -11,4 +11,6 @@ root.render(
     </React.StrictMode>
 );
 
-reportWebVitals();
+getCLS(console.log);
+getFID(console.log);
+getLCP(console.log);

@@ -7,6 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
+        publicPath: '/',
     },
     mode: 'development',
     devtool: 'source-map',
@@ -15,6 +16,7 @@ module.exports = {
         alias: {
             '@components': path.resolve(__dirname, 'src/components/'),
             '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@pages': path.resolve(__dirname, 'src/pages'),
             '@routes': path.resolve(__dirname, 'src/routes/'),
             '@styles': path.resolve(__dirname, 'src/styles/'),
         }

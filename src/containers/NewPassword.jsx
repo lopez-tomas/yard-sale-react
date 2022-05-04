@@ -1,7 +1,7 @@
 import React from 'react';
-import '@styles/Login.sass';
+import '@styles/NewPassword.sass';
 
-const Login = () => {
+const NewPassword = () => {
   return (
     <main className="container">
       <figure className="logo__container">
@@ -28,4 +28,4 @@ const Login = () => {
   );
 }
 
-export default Login;
+export default NewPassword;

@@ -1,5 +1,7 @@
 import React from 'react';
 import '@styles/NewPassword.sass';
+import Label from '@components/Label';
+import Input from '@components/Input';
 
 const NewPassword = () => {
   return (
@@ -15,13 +17,13 @@ const NewPassword = () => {
         </div>
 
         <form className="form" action="/">
-          <label className="label" for="new-password">Password</label>
-          <input className="input input__new-password" type="password" id="new-password" placeholder="********" required />
+          <Label to="new-password">Password</Label>
+          <Input type="password" id="new-password" placeholder="********" />
 
-          <label className="label" for="re-enter-password">Re-enter password</label>
-          <input className="input input__new-password" type="password" id="re-enter-password" placeholder="********" required />
+          <Label to="re-new-password">Re-enter password</Label>
+          <Input type="password" id="re-new-password" placeholder="********" />
 
-          <input className="primary__btn new-password__btn" type="submit" value="Confirm new password" />
+          <Input type="submit" value="Confirm new password" />
         </form>
       </div>
     </main>

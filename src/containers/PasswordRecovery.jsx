@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '@styles/PasswordRecovery.sass';
+import Figure from '@components/Figure';
+import Button from '@components/Button';
 
 const PasswordRecovery = () => {
   return (
     <main className="container">
-      <figure className="logo__container">
-        <img className="logo" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo" />
-      </figure>
+      <Figure figureClass="logo__container" imageClass="logo" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo" />
 
       <div className="login__container">
         <div className="login__message">
@@ -18,10 +19,12 @@ const PasswordRecovery = () => {
           <img className="icon" src="./icons/email.svg" alt="Email sent" />
         </figure>
 
-        <button className="primary__btn login__btn">Login</button>
+        <Link to="/login">
+          <Button variant="primary">Login</Button>
+        </Link>
         <p className="resend-email">
           Didn't receive the email?
-          <a className="resend" href="/">Resend</a>
+          <a className="resend" href="/password-recovery"> Resend</a>
         </p>
       </div>
     </main>

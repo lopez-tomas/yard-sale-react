@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '@styles/NotFound.sass';
+import Button from '@components/Button';
 
 const NotFound = () => {
   return (
@@ -16,7 +17,7 @@ const NotFound = () => {
         <p>Page not found 😢</p>
       </div>
       <Link to="/">
-        <button href="/" className="primary__btn">Go back to Home</button>
+        <Button variant="primary">Go back to Home</Button>
       </Link>
     </div>
   )

@@ -10,8 +10,8 @@ const NotFound = () => {
           <div className='a'>4</div>
           <div className='b'>0</div>
           <div className='c'>4</div>
-          <div class="shadow"></div>
-          <div class="shadow-two"></div>
+          <div className="shadow"></div>
+          <div className="shadow-two"></div>
         </div>
         <p>Page not found 😢</p>
       </div>

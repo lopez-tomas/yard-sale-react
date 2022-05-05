@@ -1,0 +1,29 @@
+@use 'modules/global'
+@use 'modules/colors'
+@use 'modules/fonts'
+
+body
+    @include global.global
+
+$card-size__desktop: 240px
+$gap__desktop: 26px
+
+$card-size__mobile: 140px
+$gap__mobile: 13px
+
+$cart-icon__desktop: 35px
+$cart-icon__desktop--hover: 38px
+
+$cart-icon__mobile: 28px
+$cart-icon__mobile--hover: 31px
+
+.cards__container
+    display: grid
+    grid-template-columns: repeat(auto-fill, $card-size__desktop)
+    gap: $gap__desktop
+    place-content: center
+
+@media (max-width: 640px)
+    .cards__container
+        grid-template-columns: repeat(2, $card-size__mobile)
+        gap: $gap__mobile

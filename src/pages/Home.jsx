@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '@components/Header';
-import Product from '@components/Product';
+import Header from '@containers/Header';
+import Product from '@containers/Product';
 import '@styles/Home.sass';
 
 const Home = () => {

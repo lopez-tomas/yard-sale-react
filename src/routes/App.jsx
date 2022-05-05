@@ -10,14 +10,14 @@ import NotFound from '@pages/NotFound';
 const App = () => {
   return (
     <Router>
-      <Layout>
+      {/* <Layout> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new-password" element={<NewPassword />} />
           <Route path="/password-recovery" element={<PasswordRecovery />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Layout>
+      {/* </Layout> */}
     </Router>
   );
 }

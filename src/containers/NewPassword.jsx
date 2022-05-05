@@ -1,6 +1,7 @@
 import React from 'react';
 import '@styles/NewPassword.sass';
 import Figure from '@components/Figure';
+import Title from '@components/Title';
 import Label from '@components/Label';
 import Input from '@components/Input';
 
@@ -10,10 +11,7 @@ const NewPassword = () => {
       <Figure logo={true} />
 
       <div className="form__container">
-        <div className="form__header">
-          <h1 className="title">Create a new password</h1>
-          <p className="subtitle">Enter a new password for your account.</p>
-        </div>
+        <Title divClass="form__header" title="Create a new password" subtitle="Enter a new password for your account." />
 
         <form className="form" action="/">
           <Label to="new-password">Password</Label>

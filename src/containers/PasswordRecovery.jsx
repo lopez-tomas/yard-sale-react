@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '@styles/PasswordRecovery.sass';
 import Figure from '@components/Figure';
+import Title from '@components/Title';
 import Button from '@components/Button';
 
 const PasswordRecovery = () => {
@@ -10,14 +11,9 @@ const PasswordRecovery = () => {
       <Figure logo={true} />
 
       <div className="login__container">
-        <div className="login__message">
-          <h1 className="title">Email has been sent!</h1>
-          <p className="subtitle">Please check your inbox for instructions on how to reset the password</p>
-        </div>
+        <Title divClass="login__message" title="Email has been sent!" subtitle="Please check your inbox for instructions on how to reset the password" />
 
-        <figure className="icon__container">
-          <img className="icon" src="./icons/email.svg" alt="Email sent" />
-        </figure>
+        <Figure figureClass="icon__container" imageClass="icon" src="./icons/email.svg" alt="Email sent" />
 
         <Link to="/login">
           <Button variant="primary">Login</Button>

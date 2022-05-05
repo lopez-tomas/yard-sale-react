@@ -1,6 +1,7 @@
 import React from 'react';
 import '@styles/Header.sass';
 import Figure from '@components/Figure';
+import Categories from '@containers/Categories';
 
 const Header = () => {
   return (
@@ -12,26 +13,7 @@ const Header = () => {
 
         <Figure figureClass="mini-logo__container" imageClass="mini-logo" src="./logos/favicon_yard_sale.svg" alt="Yard Sale logo" />
 
-        <ul className="categories">
-          <li>
-            <a href="">All</a>
-          </li>
-          <li>
-            <a href="">Clothes</a>
-          </li>
-          <li>
-            <a href="">Electronics</a>
-          </li>
-          <li>
-            <a href="">Furnitures</a>
-          </li>
-          <li>
-            <a href="">Toys</a>
-          </li>
-          <li>
-            <a href="">Others</a>
-          </li>
-        </ul>
+        <Categories />
       </div>
 
       <div className="menu-right">

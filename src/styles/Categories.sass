@@ -1,0 +1,27 @@
+@use 'modules/colors'
+
+$separation: 6px
+$separationx2: $separation * 2
+
+.categories
+	height: 100%
+	margin: 0
+	padding: 0
+
+li
+	align-self: center
+	margin: 0 $separationx2
+
+	:hover
+	color: colors.$dark
+
+li.all
+	:hover
+		color: colors.$white
+		background-color: colors.$main-color
+
+	a
+		padding: $separation $separationx2
+		border: 1px solid colors.$main-color
+		border-radius: $separation + 2
+		color: colors.$main-color

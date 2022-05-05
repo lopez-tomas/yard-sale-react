@@ -1,0 +1,128 @@
+@use 'modules/global'
+@use 'modules/colors'
+@use 'modules/fonts'
+@use 'modules/_primary-btn'
+
+body
+	@include global.global
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+
+.error-container
+	display: flex
+	flex-direction: column
+	justify-content: center
+	margin: 0 auto
+	width: 300px
+
+	.error
+		display: flex
+		align-items: center
+		flex-direction: column
+
+		.bouncing
+			display: flex
+			position: relative
+			font-size
+			font-weight: 700
+
+			div
+				font-size: 5rem
+
+			.a, .b, .c
+				color: colors.$main-color
+				text-shadow: 0 3px colors.$darker-main-color, 0 5px colors.$darker-main-color, 0 7px colors.$darker-main-color
+
+		p
+			margin: 1rem 0
+			margin-bottom: 3rem
+			font-family: fonts.$secondary-font
+			font-size: 2rem
+			color: colors.$dark
+
+@keyframes bounce
+	0%
+		transform: scale(1,1) translateY(0)
+	10%
+		transform: scale(1.1,.9) translateY(0)
+	30%
+		transform: scale(.9,1.1)   translateY(-55px)
+	50%
+		transform: scale(1.05,.95) translateY(0)
+	58%
+		transform: scale(1,1) translateY(-7px)
+	65%
+		transform: scale(1,1) translateY(0)
+	100%
+		transform: scale(1,1) translateY(0)
+
+.a
+	animation: bounce 1s ease infinite
+
+.b
+	animation: bounce 1s ease infinite .1s
+
+.c
+	animation: bounce 1s ease infinite .2s
+
+.bouncing:before, .bouncing:after
+	content:""
+	position: absolute
+	background-color: rgba(0,0,0,0.4)
+	width: 50px
+	height:5px
+	border-radius:50%
+	top:82px
+	z-index:-1
+
+.shadow, .shadow-two
+	position: absolute
+	top:82px
+	z-index:-1
+
+.shadow:before
+	content:""
+	position: absolute
+	background-color: rgba(0,0,0,0.4)
+	width: 50px
+	height:5px
+	border-radius:50%
+	top:0
+
+.bouncing:before
+	left:0
+	animation: scale 1s linear infinite
+
+@keyframes scale
+	0%
+		transform: scaleX(1)
+	25%
+		transform: scaleX(0.4)
+	50%
+		transform: scaleX(1)
+	75%
+		transform: scaleX(0.9)
+	100%
+		transform: scaleX(1)
+
+.bouncing:after
+	left: 57px
+	animation: scale 1s linear infinite .1s
+
+.shadow:before
+	left: 116px
+	animation: scale 1s linear infinite .2s
+
+.shadow:after
+	left:175px
+	animation: scale 1s linear infinite .3s
+
+.shadow-two:before
+	left:232px
+	animation: scale 1s linear infinite .4s
+
+.shadow-two:after
+	left: 285px
+	animation: scale 1s linear infinite .5s

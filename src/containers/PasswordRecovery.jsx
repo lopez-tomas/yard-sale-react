@@ -7,7 +7,7 @@ import Button from '@components/Button';
 const PasswordRecovery = () => {
   return (
     <main className="container">
-      <Figure figureClass="logo__container" imageClass="logo" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo" />
+      <Figure logo={true} />
 
       <div className="login__container">
         <div className="login__message">

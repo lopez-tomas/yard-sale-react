@@ -1,21 +1,16 @@
 import React from 'react';
 import '@styles/Header.sass';
+import Figure from '@components/Figure';
 
 const Header = () => {
   return (
     <nav className="menu">
-      <figure className="menu-icon__container">
-        <img className="menu-icon" src="./icons/icon_menu.svg" alt="Menu icon" />
-      </figure>
+      <Figure figureClass="menu-icon__container" imageClass="menu-icon" src="./icons/icon_menu.svg" alt="Menu icon" />
 
       <div className="menu-left">
-        <figure className="logo__container">
-          <img className="logo" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo" />
-        </figure>
+        <Figure logo={true} />
 
-        <figure className="mini-logo__container">
-          <img className="mini-logo" src="./logos/favicon_yard_sale.svg" alt="Yard Sale logo" />
-        </figure>
+        <Figure figureClass="mini-logo__container" imageClass="mini-logo" src="./logos/favicon_yard_sale.svg" alt="Yard Sale logo" />
 
         <ul className="categories">
           <li>
@@ -46,10 +41,7 @@ const Header = () => {
           <img className="arrow" src="./icons/flechita.svg" alt="Rigth arrow" />
         </div>
 
-        <figure className="cart__container">
-          {/*<img className="cart" src="./icons/icon_shopping_cart.svg" alt="Cart icon" >*/}
-          <img className="cart" src="./icons/icon_shopping_cart_notification.svg" alt="Shopping cart icon" />
-        </figure>
+        <Figure figureClass="cart__container" imageClass="cart" src="./icons/icon_shopping_cart_notification.svg" alt="Shopping cart icon" />
       </div>
     </nav>
   )

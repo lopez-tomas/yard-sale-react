@@ -1,14 +1,13 @@
 import React from 'react';
 import '@styles/NewPassword.sass';
+import Figure from '@components/Figure';
 import Label from '@components/Label';
 import Input from '@components/Input';
 
 const NewPassword = () => {
   return (
     <main className="container">
-      <figure className="logo__container">
-        <img className="logo" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo" />
-      </figure>
+      <Figure logo={true} />
 
       <div className="form__container">
         <div className="form__header">

@@ -5,7 +5,7 @@ import '@styles/Home.sass';
 
 const Home = () => {
   return (
-    <body>
+    <>
       <Header />
 
       <main class="container">
@@ -15,8 +15,8 @@ const Home = () => {
           <Product />
         </section>
       </main>
-    </body>
+    </>
   )
 }
 
-export default Home
+export default Home;

@@ -1,12 +1,12 @@
 import React from 'react';
+import Figure from '@components/Figure';
+import Button from '@components/Button';
 import '@styles/ProductDetails.sass';
 
 const ProductDetails = () => {
   return (
     <aside class="product-detail">
-      <figure class="product-image__container">
-        <img class="product-image" src="./images/bike.jpeg" alt="Product" />
-      </figure>
+      <Figure figureClass="product-image__container" imageClass="product-image" src="./images/bike.jpeg" alt="Product" />
 
       <div class="product-info">
         <div>
@@ -22,10 +22,10 @@ const ProductDetails = () => {
           </p>
         </div>
 
-        <button class="primary__btn add__button" type="submit">
+        <Button>
           <img src="./icons/bt_add_to_cart.svg" alt="Add to cart" />
           Add to cart
-        </button>
+        </Button>
       </div>
 	</aside>
   )

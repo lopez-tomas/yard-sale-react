@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '@containers/Header';
 import Label from '@components/Label';
 import Input from '@components/Input';
+import '@styles/MyAccount.sass';
 
 const MyAccount = () => {
   return (

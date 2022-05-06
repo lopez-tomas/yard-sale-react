@@ -19,12 +19,12 @@ const NewPassword = () => {
 
           <form className="form" action="/">
             <Label to="new-password">Password</Label>
-            <Input type="password" id="new-password" placeholder="********" />
+            <Input className="input__new-password" type="password" id="new-password" placeholder="********" />
 
             <Label to="re-new-password">Re-enter password</Label>
-            <Input type="password" id="re-new-password" placeholder="********" />
+            <Input className="input__new-password" type="password" id="re-new-password" placeholder="********" />
 
-            <Input type="submit" value="Confirm new password" />
+            <Input className="new-password__btn" type="submit" value="Confirm new password" />
           </form>
         </div>
       </main>

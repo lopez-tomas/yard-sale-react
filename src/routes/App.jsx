@@ -23,6 +23,11 @@ const App = () => {
               <Home />
             </HeaderLayout>
           } />
+          <Route path="/create-account" element={
+            <HeaderLayout>
+              <MyAccount create />
+            </HeaderLayout>
+          } />
           <Route path="/login" element={
             <HeaderLayout>
               <Login />
@@ -31,6 +36,11 @@ const App = () => {
           <Route path="/my-account" element={
             <HeaderLayout>
               <MyAccount />
+            </HeaderLayout>
+          } />
+          <Route path="/my-account-edit" element={
+            <HeaderLayout>
+              <MyAccount edit />
             </HeaderLayout>
           } />
           <Route path="/new-password" element={

@@ -21,7 +21,6 @@ const MyAccount = () => {
           </div>
 
           <Input type="submit" value="Edit" secondary />
-          {/* <input class="secondary__btn edit__btn" type="submit" value="Edit" /> */}
         </form>
       </div>
     </main>

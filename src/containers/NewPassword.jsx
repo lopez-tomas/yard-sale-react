@@ -8,7 +8,7 @@ import Input from '@components/Input';
 const NewPassword = () => {
   return (
     <main className="container">
-      <Figure logo={true} />
+      <Figure logo />
 
       <div className="form__container">
         <Title divClass="form__header" title="Create a new password" subtitle="Enter a new password for your account." />

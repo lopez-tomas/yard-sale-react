@@ -8,7 +8,7 @@ import Button from '@components/Button';
 const PasswordRecovery = () => {
   return (
     <main className="container">
-      <Figure logo={true} />
+      <Figure logo />
 
       <div className="login__container">
         <Title divClass="login__message" title="Email has been sent!" subtitle="Please check your inbox for instructions on how to reset the password" />
@@ -16,7 +16,7 @@ const PasswordRecovery = () => {
         <Figure figureClass="icon__container" imageClass="icon" src="./icons/email.svg" alt="Email sent" />
 
         <Link to="/login">
-          <Button variant="primary">Login</Button>
+          <Button>Login</Button>
         </Link>
         <p className="resend-email">
           Didn't receive the email?

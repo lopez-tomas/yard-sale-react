@@ -9,7 +9,7 @@ const Header = () => {
       <Figure figureClass="menu-icon__container" imageClass="menu-icon" src="./icons/icon_menu.svg" alt="Menu icon" />
 
       <div className="menu-left">
-        <Figure logo={true} />
+        <Figure logo />
 
         <Figure figureClass="mini-logo__container" imageClass="mini-logo" src="./logos/favicon_yard_sale.svg" alt="Yard Sale logo" />
 

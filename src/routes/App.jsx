@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from '@containers/Layout';
 import Home from '@pages/Home';
+import MyAccount from '@pages/MyAccount';
+import NewPassword from '@pages/NewPassword';
+import PasswordRecovery from '@pages/PasswordRecovery';
+import PasswordRecoverySuccess from '@pages/PasswordRecoverySuccess';
 import ProductDetails from '@containers/ProductDetails';
-import MyAccount from '@containers/MyAccount';
-import NewPassword from '@containers/NewPassword';
-import PasswordRecovery from '@containers/PasswordRecovery';
-import PasswordRecoverySuccess from '@containers/PasswordRecoverySuccess';
 import NotFound from '@pages/NotFound';
 
 const App = () => {

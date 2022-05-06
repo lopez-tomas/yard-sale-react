@@ -1,10 +1,10 @@
 import React from 'react';
-import '@styles/NewPassword.sass';
 import Header from '@containers/Header';
 import Figure from '@components/Figure';
 import Title from '@components/Title';
 import Label from '@components/Label';
 import Input from '@components/Input';
+import '@styles/NewPassword.sass';
 
 const NewPassword = () => {
   return (

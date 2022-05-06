@@ -2,14 +2,14 @@ import React from 'react';
 import '@styles/modules/_inputs.sass';
 import '@styles/modules/_primary-btn.sass';
 
-const Input = ({ type, id, placeholder, value}) => {
-  if (value == undefined) {
+const Input = ({ type, id, placeholder, value, disabled = false, secondary = false }) => {
+  if (type != "submit") {
     return (
-      <input className="input" type={type} id={id} placeholder={placeholder} required />
+      <input className={disabled ? "input disabled" : "input"} type={type} id={id} placeholder={placeholder} value={value} disabled={disabled} required />
     )
   } else {
     return (
-      <input className="primary__btn login__btn" type={type} value={value} />
+      <input className={secondary ? "secondary__btn" : "primary__btn"} type={type} value={value} />
     )
   }
 }

@@ -16,12 +16,14 @@ const PasswordRecovery = () => {
         <div className="login__container">
           <Title divClass="login__message" title="Password recovery" subtitle="Inform the email address used to create your account" />
 
-          <Label to="email-recovery">Email address</Label>
-          <Input type="email" id="email-recovery" placeholder="Your email address" />
+          <form className="form" action="/">
+            <Label to="email-recovery">Email address</Label>
+            <Input type="email" id="email-recovery" placeholder="Your email address" />
 
-          <Link to="/password-recovery-success">
-            <Button>Submit</Button>
-          </Link>
+            <Link to="/password-recovery-success">
+              <Button>Submit</Button>
+            </Link>
+          </form>
           <p className="resend-email">
             <a className="resend" href="/login"> Back to login</a>
           </p>

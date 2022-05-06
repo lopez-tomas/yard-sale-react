@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Figure from '@components/Figure';
 import Label from '@components/Label';
@@ -14,13 +14,13 @@ const Login = () => {
       <div class="form__container">
         <form class="form" action="/">
           <Label to="email">Email address</Label>
-          <Input type="email" id="email" placeholder="Enter your email" />
+          <Input className="input__email" type="email" id="email" placeholder="Enter your email" />
 
           <Label to="password">Password</Label>
-          <Input type="password" id="password" placeholder="********" />
+          <Input className="input__password" type="password" id="password" placeholder="********" />
 
           <Link to="/">
-            <Input type="submit" value="Log in" />
+            <Input className="login__btn" type="submit" value="Log in" />
           </Link>
         </form>
 
@@ -34,4 +34,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;

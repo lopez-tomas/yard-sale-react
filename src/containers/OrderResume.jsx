@@ -1,13 +1,11 @@
 import React from 'react';
-import OrderProduct from '@components/OrderProduct';
+import OrderHeader from '@components/Order/OrderHeader';
+import OrderProduct from '@components/Order/OrderProduct';
 
 const OrderResume = ({ date, quantity }) => {
   return (
     <div class="order__resume">
-      <div>
-        <p class="date">{date}</p>
-        <p class="quantity">{quantity} articles</p>
-      </div>
+      <OrderHeader date={date} quantity={quantity} />
 
       <p class="total">$ 120.00</p>
 

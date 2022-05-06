@@ -1,6 +1,7 @@
 import React from 'react';
 import '@styles/modules/_inputs.sass';
 import '@styles/modules/_primary-btn.sass';
+import '@styles/modules/_secondary-btn.sass';
 
 const Input = ({ type, id, placeholder, value, disabled = false, secondary = false }) => {
   if (type != "submit") {

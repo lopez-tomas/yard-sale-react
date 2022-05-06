@@ -6,6 +6,7 @@ import Home from '@pages/Home';
 import MyAccount from '@containers/MyAccount';
 import NewPassword from '@containers/NewPassword';
 import PasswordRecovery from '@containers/PasswordRecovery';
+import PasswordRecoverySuccess from '@containers/PasswordRecoverySuccess';
 import NotFound from '@pages/NotFound';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/my-account" element={<MyAccount />} />
           <Route path="/new-password" element={<NewPassword />} />
           <Route path="/password-recovery" element={<PasswordRecovery />} />
+          <Route path="/password-recovery-success" element={<PasswordRecoverySuccess />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       {/* </Layout> */}

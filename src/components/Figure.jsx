@@ -1,7 +1,7 @@
 import React from 'react';
 import '@styles/modules/_logo.sass';
 
-const Figure = ({ logo, figureClass, imageClass, src, alt, children }) => {
+const Figure = ({ logo = false, figureClass, imageClass, src, alt, children }) => {
   if (logo) {
     return (
       <figure className="logo__container">

@@ -9,6 +9,8 @@ import MyAccount from '@pages/MyAccount';
 import NewPassword from '@pages/NewPassword';
 import PasswordRecovery from '@pages/PasswordRecovery';
 import PasswordRecoverySuccess from '@pages/PasswordRecoverySuccess';
+import MyOrders from '@pages/MyOrders';
+import ShoppingCart from '@containers/ShoppingCart';
 import ProductDetails from '@containers/ProductDetails';
 import NotFound from '@pages/NotFound';
 
@@ -46,6 +48,12 @@ const App = () => {
               <PasswordRecoverySuccess />
             </HeaderLayout>
           } />
+          <Route path="/my-orders" element={
+            <HeaderLayout>
+              <MyOrders />
+            </HeaderLayout>
+          } />
+          <Route path="/shopping-cart" element={<ShoppingCart />} />
           <Route path="/product-details" element={<ProductDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

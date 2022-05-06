@@ -1,29 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '@styles/PasswordRecovery.sass';
-import Figure from '@components/Figure';
+import Header from '@containers/Header';
 import Title from '@components/Title';
+import Label from '@components/Label';
+import Input from '@components/Input';
 import Button from '@components/Button';
+import '@styles/PasswordRecovery.sass';
 
 const PasswordRecovery = () => {
   return (
-    <main className="container">
-      <Figure logo />
+    <>
+      <Header />
 
-      <div className="login__container">
-        <Title divClass="login__message" title="Email has been sent!" subtitle="Please check your inbox for instructions on how to reset the password" />
+      <main className="container">
+        <div className="login__container">
+          <Title divClass="login__message" title="Password recovery" subtitle="Inform the email address used to create your account" />
 
-        <Figure figureClass="icon__container" imageClass="icon" src="./icons/email.svg" alt="Email sent" />
+          <Label to="email-recovery">Email address</Label>
+          <Input type="email" id="email-recovery" placeholder="Your email address" />
 
-        <Link to="/login">
-          <Button>Login</Button>
-        </Link>
-        <p className="resend-email">
-          Didn't receive the email?
-          <a className="resend" href="/password-recovery"> Resend</a>
-        </p>
-      </div>
-    </main>
+          <Link to="/password-recovery-success">
+            <Button>Submit</Button>
+          </Link>
+          <p className="resend-email">
+            <a className="resend" href="/login"> Back to login</a>
+          </p>
+        </div>
+      </main>
+    </>
   )
 }
 

@@ -1,11 +1,12 @@
 import React from 'react';
 import Figure from '@components/Figure';
+import bike from '@images/bike.jpeg';
 
 const OrderProduct = ({ productName, productPrice }) => {
   return (
     <div class="product">
       <div>
-        <Figure figureClass="product--image__container" imageClass="product--image" src="./images/bike.jpeg" alt="Product image" />
+        <Figure figureClass="product--image__container" imageClass="product--image" src={bike} alt="Product image" />
 
         <p class="product--name">{productName}</p>
       </div>

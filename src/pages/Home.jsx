@@ -1,17 +1,12 @@
 import React from 'react';
-import Product from '@containers/Product';
-import '@styles/Home.sass';
+import ProductList from '@containers/ProductList';
 
 const Home = () => {
-  return (
-    <main class="container">
-      <section className="cards__container">
-        <Product />
-        <Product />
-        <Product />
-      </section>
-    </main>
-  )
+	return (
+		<>
+			<ProductList />
+		</>
+	);
 }
 
 export default Home;

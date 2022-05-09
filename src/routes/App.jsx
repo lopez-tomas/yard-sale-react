@@ -1,74 +1,37 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from '@containers/Layout';
-import HeaderLayout from '@containers/HeaderLayout';
 import Home from '@pages/Home';
 import Login from '@pages/Login';
-import MyAccount from '@pages/MyAccount';
-import NewPassword from '@pages/NewPassword';
 import PasswordRecovery from '@pages/PasswordRecovery';
-import PasswordRecoverySuccess from '@pages/PasswordRecoverySuccess';
-import MyOrders from '@pages/MyOrders';
-import ShoppingCart from '@containers/ShoppingCart';
-import ProductDetails from '@containers/ProductDetails';
+import SendEmail from '@pages/SendEmail';
+import NewPassword from '@pages/NewPassword';
+import MyAccount from '@pages/MyAccount';
+import CreateAccount from '@pages/CreateAccount';
+import Checkout from '@pages/Checkout';
+import Orders from '@pages/Orders';
 import NotFound from '@pages/NotFound';
+import '@styles/global.css';
 
 const App = () => {
-  return (
-    <Router>
-        <Routes>
-          <Route path="/" element={
-            <HeaderLayout>
-              <Home />
-            </HeaderLayout>
-          } />
-          <Route path="/create-account" element={
-            <HeaderLayout>
-              <MyAccount create />
-            </HeaderLayout>
-          } />
-          <Route path="/login" element={
-            <HeaderLayout>
-              <Login />
-            </HeaderLayout>
-          } />
-          <Route path="/my-account" element={
-            <HeaderLayout>
-              <MyAccount />
-            </HeaderLayout>
-          } />
-          <Route path="/my-account-edit" element={
-            <HeaderLayout>
-              <MyAccount edit />
-            </HeaderLayout>
-          } />
-          <Route path="/new-password" element={
-            <HeaderLayout>
-              <NewPassword />
-            </HeaderLayout>
-          } />
-          <Route path="/password-recovery" element={
-            <HeaderLayout>
-              <PasswordRecovery />
-            </HeaderLayout>
-          } />
-          <Route path="/password-recovery-success" element={
-            <HeaderLayout>
-              <PasswordRecoverySuccess />
-            </HeaderLayout>
-          } />
-          <Route path="/my-orders" element={
-            <HeaderLayout>
-              <MyOrders />
-            </HeaderLayout>
-          } />
-          <Route path="/shopping-cart" element={<ShoppingCart />} />
-          <Route path="/product-details" element={<ProductDetails />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-    </Router>
-  );
+	return (
+		<BrowserRouter>
+			<Layout>
+				<Routes>
+					<Route exact path="/" element={<Home />} />
+					<Route exact path="/login" element={<Login />} />
+					<Route exact path="/password-recovery" element={<PasswordRecovery />} />
+					<Route exact path="/send-email" element={<SendEmail />} />
+					<Route exact path="/new-password" element={<NewPassword />} />
+					<Route exact path="/account" element={<MyAccount />} />
+					<Route exact path="/signup" element={<CreateAccount />} />
+					<Route exact path="/checkout" element={<Checkout />} />
+					<Route exact path="/orders" element={<Orders />} />
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+			</Layout>
+		</BrowserRouter>
+	);
 }
 
 export default App;

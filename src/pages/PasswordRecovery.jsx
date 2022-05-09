@@ -1,32 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Title from '@components/Title';
-import Label from '@components/Label';
-import Input from '@components/Input';
-import Button from '@components/Button';
-import '@styles/PasswordRecovery.sass';
+import '@styles/PasswordRecovery.scss';
+import logo from '@logos/logo_yard_sale.svg';
 
 const PasswordRecovery = () => {
-  return (
-
-    <main className="container">
-      <div className="login__container">
-        <Title divClass="login__message" title="Password recovery" subtitle="Inform the email address used to create your account" />
-
-        <form className="form" action="/">
-          <Label to="email-recovery">Email address</Label>
-          <Input type="email" id="email-recovery" placeholder="Your email address" />
-
-          <Link to="/password-recovery-success">
-            <Button>Submit</Button>
-          </Link>
-        </form>
-        <p className="resend-email">
-          <a className="resend" href="/login"> Back to login</a>
-        </p>
-      </div>
-    </main>
-  )
+	return (
+		<div className="PasswordRecovery">
+			<div className="PasswordRecovery-container">
+				<img src={logo} alt="logo" className="logo" />
+				<h1 className="title">Password recovery</h1>
+				<p className="subtitle">Inform the email address used to create your account</p>
+				<form action="/" className="form">
+					<label htmlFor="email" className="label">Email address</label>
+					<input type="text" id="email" className="input input-email" />
+					<input type="submit" value="Confirm" className="primary-button login-button" />
+				</form>
+			</div>
+		</div>
+	);
 }
 
 export default PasswordRecovery;

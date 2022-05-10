@@ -11,7 +11,8 @@
 	bottom: auto;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
-	height: auto;
+	height: 100vh;
+	animation: swipeLeft .40s;
 }
 .my-order-content {
 	overflow-y: auto;
@@ -65,5 +66,13 @@
 @media (max-width: 640px) {
 	.MyOrder {
 		width: 100%;
+	}
+}
+@keyframes swipeLeft {
+	0% {
+		width: 0;
+	}
+	100% {
+	width: 360px;
 	}
 }

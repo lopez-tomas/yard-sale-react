@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API = 'https://api.escuelajs.co/api/v1/products';
 
-const useGetProducts = (limit = 6, offset = 0) => {
+const useGetProducts = (limit = 6, offset = 2) => {
   const [products, setProducts] = useState([]);
 
 	const getProducts = async () => {

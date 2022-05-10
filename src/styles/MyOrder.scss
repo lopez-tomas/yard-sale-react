@@ -11,6 +11,11 @@
 	bottom: auto;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
+	height: auto;
+}
+.my-order-content {
+	overflow-y: auto;
+	height: 350px;
 }
 .title-container {
 	display: flex;

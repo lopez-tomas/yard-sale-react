@@ -10,6 +10,8 @@
 	top: 60px;
 	right: 50px;
 	background-color: white;
+	z-index: 10;
+	animation: swipeDown .26s ease
 }
 .Menu ul {
 	list-style: none;
@@ -36,4 +38,12 @@
 	text-decoration: none;
 	margin-bottom: 20px;
 	display: inline-block;
+}
+@keyframes swipeDown {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 100%;
+	}
 }

@@ -1,36 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import AppContext from '@context/AppContext';
 import '@styles/ProductItem.scss';
 import addToCartIcon from '@icons/bt_add_to_cart.svg';
 
-const ProductItem = ({ title, price, image }) => {
-	const [message, setMessage] = useState('');
-	const [cart, setCart] = useState(false);
+const ProductItem = ({ product }) => {
+	const { addToCart } = useContext(AppContext);
 
-	const handleMessage = () => {
-		if (!cart) {
-			setMessage('Added to cart');
-		} else {
-			setMessage('Removed from cart');
-		}
-	}
-
-	const handleCart = () => {
-		setCart(!cart);
-		handleMessage();
+	const handleClick = item => {
+		addToCart(item);
 	}
 
 	return (
 		<div className="ProductItem">
-			<img src={image} alt={title} />
-			<div>
-				{message}
-			</div>
+			<img src={product.images[0]} alt={product.title} />
 			<div className="product-info">
 				<div>
-					<p>${price}</p>
-					<p>{title}</p>
+					<p>${product.price}</p>
+					<p>{product.title}</p>
 				</div>
-				<figure onClick={handleCart}>
+				<figure onClick={() => handleClick(product)}>
 					<img src={addToCartIcon} alt="" />
 				</figure>
 			</div>

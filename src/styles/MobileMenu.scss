@@ -1,0 +1,48 @@
+@use './vars';
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+	position: fixed;
+	top: 0px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #ffffff;
+	border: 1px solid var(--very-light-pink);
+	border-radius: 6px;
+	animation: swipeDown 0.26s ease;
+}
+.mobile-menu img {
+    height: 10px;
+    width: 10px;
+    align-self: end;
+    padding: 5px;
+    cursor: pointer;
+}
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    /* margin-bottom: 24px; */
+}
+.mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+}
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.mobile-menu ul li {
+    margin-bottom: 24px;
+}
+.email {
+    font-size: var(--sm);
+    font-weight: 300 !important;
+}
+.sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+}

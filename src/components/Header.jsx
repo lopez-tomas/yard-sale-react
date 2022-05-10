@@ -27,12 +27,10 @@ const Header = () => {
 
 	const handleToggle = () => {
 		setToggle(!toggle);
-		setToggleMobile(false);
 	}
 
 	const handleToggleMobile = () => {
 		setToggleMobile(!toggleMobile);
-		setToggle(false);
 	}
 
 	const handleToggleOrders = () => {

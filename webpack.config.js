@@ -9,7 +9,7 @@ module.exports = {
         filename: '[name].[contenthash].js',
         publicPath: '/',
     },
-    mode: production,
+    mode: 'production',
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {

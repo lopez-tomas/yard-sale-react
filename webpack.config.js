@@ -6,8 +6,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js',
-        publicPath: '/',
+        filename: 'yard-sale-react/[name].[contenthash].js',
+        publicPath: '/yard-sale-react/',
     },
     mode: 'production',
     resolve: {

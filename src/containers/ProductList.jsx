@@ -5,13 +5,12 @@ import '@styles/ProductList.scss';
 
 const ProductList = () => {
 	const products = useGetProducts();
-
 	return (
 		<section className="main-container">
 			<div className="ProductList">
-				{products.map(product => (
+				{products.map((product, index) => (
 					<ProductItem
-						key={product.id}
+						key={`productItem-${product.id}-${index}`}
 						product={product}
 					/>
 				))}

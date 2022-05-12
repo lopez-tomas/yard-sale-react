@@ -27,8 +27,8 @@ const MyOrder = ({ toggleOrders, setToggleOrders }) => {
 				{state.cart.map((product, index) => (
 					<OrderItem
 						key={`orderItem-${product.id}-${index}`}
-						indexValue={index}
-						product={product} />
+						product={product}
+					/>
 				))}
 			</div>
 			<div className="order">
